@@ -2,7 +2,7 @@
  *
  * Created by: Evan
  * Created on: Feb 2026
- * This program ...
+ * This program changes temperature from C to K
 */
 
 basic.clearScreen()
@@ -21,5 +21,5 @@ input.onButtonPressed(Button.A, function () {
 
   //output answer
     basic.clearScreen()
-    basic.showString("The temperature is:" + temperatureInKelvin.toString() + "K")
+    basic.showString("The temperature is:" + temperatureInKelvin.toString() + 'K')
 })
