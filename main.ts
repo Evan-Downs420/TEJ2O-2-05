@@ -5,17 +5,21 @@
  * This program ...
 */
 
-let temperatureInCelsius: number
-let temperatureInKelvin: number
-
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
-input.onButtonPressed(Button.A, function () {
-    const temperature = input.temperature()
-    temperatureInCelsius = (temperature + 273.15)
-    temperatureInKelvin = Math.round(temperature)
+//variables
+let temperatureInCelsius: number
+let temperatureInKelvin: number
 
+input.onButtonPressed(Button.A, function () {
+  //get temperature (input)
+    const temperatureInCelsius = input.temperature()
+  //process
+    temperatureInKelvin = (temperatureInCelsius + 273.15)
+    temperatureInKelvin = Math.round(temperatureInKelvin)
+
+  //output answer
     basic.clearScreen()
-    basic.showString("The temperature is" + (temperature) + "K")
+    basic.showString("The temperature is:" + temperatureInKelvin.toString() + "K")
 })
